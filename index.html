@@ -294,6 +294,37 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
 @media(max-width:900px){.detail-grid{grid-template-columns:1fr;}.calc-box{position:static;}.pkg-grid{grid-template-columns:1fr;}.thumb-sections{grid-template-columns:1fr;}}
 @media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr;}.hide-m{display:none!important;}.sh h1{font-size:26px;}.footer-grid{grid-template-columns:1fr 1fr;}.pkg-grid{grid-template-columns:1fr;}}
 @media(max-width:480px){.logo img{height:28px!important;max-width:90px;}.lb{font-size:10px;padding:3px 6px;}.lb-bar{gap:3px;}}
+
+/* ── Hamburger mobile menu ─────────────────────────────── */
+.ham-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--navy);font-size:22px;line-height:1;}
+@media(max-width:768px){
+  .ham-btn{display:flex;align-items:center;justify-content:center;}
+}
+#mobile-menu{
+  display:none;
+  position:absolute;top:100%;left:0;right:0;
+  background:#fff;
+  border-bottom:2px solid var(--gm);
+  padding:10px 0;
+  z-index:999;
+  box-shadow:0 8px 24px rgba(27,58,92,.12);
+}
+#mobile-menu.open{display:block;}
+#mobile-menu .mnb{
+  display:block;width:100%;text-align:left;
+  padding:12px 20px;font-size:14px;font-weight:500;color:var(--txl);
+  background:none;border:none;cursor:pointer;
+  border-left:3px solid transparent;
+  transition:.12s;
+}
+#mobile-menu .mnb:hover,#mobile-menu .mnb.on{
+  background:var(--teal-p);color:var(--teal);
+  border-left-color:var(--teal);
+}
+#mobile-menu .mnb.cta{color:var(--navy);font-weight:700;}
+#mobile-menu .lang-row{
+  display:flex;gap:8px;padding:10px 20px;border-top:1px solid var(--gm);margin-top:6px;
+}
 </style>
 </head>
 <body>
@@ -312,8 +343,26 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
     <div class="lb-bar">
       <button class="lb on" onclick="setLang('en')">EN</button>
       <button class="lb" onclick="setLang('th')">TH</button>
-      <button class="lb" onclick="setLang('zh')">中文</button>
       <button class="lb" onclick="setLang('ru')">RU</button>
+      <button class="lb" onclick="setLang('zh')">中文</button>
+    </div>
+    <!-- Hamburger (mobile only) -->
+    <button class="ham-btn" id="ham-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span id="ham-icon">☰</span>
+    </button>
+  </div>
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu">
+    <button class="mnb on" id="mnav-rto" onclick="goTo('home');closeMobileMenu()" data-i18n="nav_rto">Rent to Own</button>
+    <button class="mnb" id="mnav-rent" onclick="goTo('rent');closeMobileMenu()" data-i18n="nav_rent">Just Rent</button>
+    <button class="mnb" id="mnav-inv" onclick="goTo('investor');closeMobileMenu()" data-i18n="nav_inv">Investor's Choice</button>
+    <button class="mnb" id="mnav-my" onclick="goTo('myhome');closeMobileMenu()" data-i18n="nav_my">My Home</button>
+    <button class="mnb cta" id="mnav-list" onclick="goTo('listprop');closeMobileMenu()" data-i18n="nav_list">List Property ▸</button>
+    <div class="lang-row">
+      <button class="lb on" onclick="setLang('en');closeMobileMenu()">EN</button>
+      <button class="lb" onclick="setLang('th');closeMobileMenu()">TH</button>
+      <button class="lb" onclick="setLang('ru');closeMobileMenu()">RU</button>
+      <button class="lb" onclick="setLang('zh');closeMobileMenu()">中文</button>
     </div>
   </div>
 </nav>
@@ -603,7 +652,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
         </div>
         <div style="background:var(--grey);border-radius:var(--r);padding:24px;text-align:center;">
           <div style="font-size:40px;margin-bottom:12px;">📱</div>
-          <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;" data-i18n="why3_title">ชำระอัตโนมัติ ผ่าน All Wallet</h3>
+          <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;" data-i18n="why3_title">ชำระอัตโนมัติ ไม่มีสะดุด</h3>
           <p style="font-size:13px;color:var(--txl);line-height:1.7;" data-i18n="why3_body">ตัดเงินอัตโนมัติทุกเดือน ไม่ต้องตามจ่าย ไม่ต้องโอนเอง ชำระอัตโนมัติ ไม่มีสะดุด</p>
         </div>
         <div style="background:var(--grey);border-radius:var(--r);padding:24px;text-align:center;">
@@ -650,7 +699,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
           <div class="sico" style="background:var(--green-p);">📈</div>
           <div class="snum">STEP 03</div>
           <h3 data-i18n="how3_title">จ่ายรายเดือน · สะสม Equity</h3>
-          <p data-i18n="how3_body">ทุกงวดเพิ่มกรรมสิทธิ์ ระบบ All Wallet ตัดอัตโนมัติ ดู Dashboard Real-time เมื่อครบก็เป็นเจ้าของ 100%</p>
+          <p data-i18n="how3_body">ทุกงวดเพิ่มกรรมสิทธิ์ ระบบตัดอัตโนมัติ ดู Dashboard Real-time เมื่อครบก็เป็นเจ้าของ 100%</p>
         </div>
       </div>
     </div>
@@ -989,23 +1038,21 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
       <div>
         <!-- Image gallery strip -->
         <div style="position:relative;border-radius:16px;overflow:hidden;height:320px;background:#ddd;margin-bottom:12px">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#1B3A5C 0%,#2E6B9E 60%,#006B6B 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700">
-            📸 Supalai Icon Sathorn — Gallery
-          </div>
+          <img src="images/hero-detail.jpg" alt="Supalai Icon Sathorn — Bangkok CBD luxury condo" style="width:100%;height:100%;object-fit:cover;display:block">
           <div style="position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap">
             <span class="tag" style="background:var(--red);color:#fff;">🔥 Fire Sale</span>
             <span class="tag" style="background:#B8860B;color:#fff;">★ Investor Pick</span>
           </div>
           <div style="position:absolute;bottom:12px;right:12px;display:flex;gap:6px">
-            <button class="btn bo bsm">📷 12 Photos</button>
-            <button class="btn bo bsm">▶ VDO</button>
+            <button class="btn bo bsm" style="background:rgba(255,255,255,.85)">📷 12 Photos</button>
+            <button class="btn bo bsm" style="background:rgba(255,255,255,.85)">▶ VDO</button>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:24px">
-          <div style="height:72px;background:linear-gradient(135deg,#E8F0F8,#ccd9e8);border-radius:8px"></div>
-          <div style="height:72px;background:linear-gradient(135deg,#E0F2F1,#b2dfdb);border-radius:8px"></div>
-          <div style="height:72px;background:linear-gradient(135deg,#FFF8E1,#ffe082);border-radius:8px"></div>
-          <div style="height:72px;background:linear-gradient(135deg,#E8F5E9,#c8e6c9);border-radius:8px"></div>
+          <div style="height:72px;border-radius:8px;overflow:hidden;cursor:pointer"><img src="images/interior-bedroom.jpg" alt="Bedroom interior" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="height:72px;border-radius:8px;overflow:hidden;cursor:pointer"><img src="images/interior-pool.jpg" alt="Pool view" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="height:72px;border-radius:8px;overflow:hidden;cursor:pointer"><img src="images/siteplan.jpg" alt="Site plan" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="height:72px;border-radius:8px;overflow:hidden;cursor:pointer;background:var(--navy);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600">+9 more</div>
         </div>
 
         <!-- Project Info -->
@@ -1268,7 +1315,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
         <div style="font-size:28px;flex-shrink:0">💳</div>
         <div>
           <div style="font-weight:700;color:var(--navy);margin-bottom:2px">Auto Monthly Deduction</div>
-          <div style="font-size:13px;color:var(--muted)">ตัดจ่ายอัตโนมัติผ่าน All Wallet · ไม่มีค่าธรรมเนียมการโอน · รับใบเสร็จทันที</div>
+          <div style="font-size:13px;color:var(--muted)">ตัดจ่ายอัตโนมัติ · ไม่มีค่าธรรมเนียมการโอน · รับใบเสร็จทันที</div>
         </div>
       </div>
     </div>
@@ -1561,7 +1608,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
       <div>
         <div style="font-size:13px;opacity:.8;margin-bottom:4px">Next Payment Due</div>
         <div style="font-size:26px;font-weight:800">฿65,000</div>
-        <div style="font-size:12px;opacity:.8;margin-top:4px">1 เม.ย. 2026 · Auto-deduct via All Wallet</div>
+        <div style="font-size:12px;opacity:.8;margin-top:4px">1 เม.ย. 2026 · Auto monthly deduction</div>
       </div>
       <button class="btn" style="background:#fff;color:var(--navy);padding:12px 24px;font-weight:700;border-radius:12px;border:none">Pay Now</button>
     </div>
@@ -1695,7 +1742,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
         <div data-i18n="suc_step1">1️⃣ ทีมงานตรวจสอบข้อมูลภายใน 24 ชม.</div>
         <div data-i18n="suc_step2">2️⃣ นัด Video Call เพื่อ KYC</div>
         <div data-i18n="suc_step3">3️⃣ เซ็นสัญญา Rent-to-Own</div>
-        <div data-i18n="suc_step4">4️⃣ โอนเงินดาวน์ผ่าน All Wallet</div>
+        <div data-i18n="suc_step4">4️⃣ โอนเงินดาวน์ผ่าน StayVerse</div>
         <div data-i18n="suc_step5">5️⃣ รับกุญแจ & เข้าอยู่!</div>
       </div>
     </div>
@@ -1944,11 +1991,11 @@ const T = {
     apply_btn:     'Submit Application',
     success_title: 'Application Submitted!',
     success_sub:   'Our team will contact you within 24 hours. Here is what happens next:',
-    suc_step1:     'Document review (1-2 days)',
-    suc_step2:     'Property visit arranged',
-    suc_step3:     'Agreement signed',
-    suc_step4:     'Keys handed over',
-    suc_step5:     'Equity journey begins'
+    suc_step1:     '1️⃣ Document review within 24 hrs',
+    suc_step2:     '2️⃣ Video Call KYC scheduled',
+    suc_step3:     '3️⃣ Sign Rent-to-Own Agreement',
+    suc_step4:     '4️⃣ Transfer down payment via StayVerse',
+    suc_step5:     '5️⃣ Get keys & move in!'
       },
   th: {
     nav_rto:       'เช่าซื้อ (RTO)',
@@ -2036,11 +2083,11 @@ const T = {
     apply_btn:     'ส่งใบสมัคร',
     success_title: 'ส่งใบสมัครแล้ว!',
     success_sub:   'ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง ขั้นตอนต่อไป:',
-    suc_step1:     'ตรวจสอบเอกสาร (1-2 วัน)',
-    suc_step2:     'นัดชมอสังหาฯ',
-    suc_step3:     'เซ็นสัญญา',
-    suc_step4:     'รับกุญแจ',
-    suc_step5:     'เริ่มต้นการสะสม Equity'
+    suc_step1:     '1️⃣ ทีมงานตรวจสอบข้อมูลภายใน 24 ชม.',
+    suc_step2:     '2️⃣ นัด Video Call เพื่อ KYC',
+    suc_step3:     '3️⃣ เซ็นสัญญา Rent-to-Own',
+    suc_step4:     '4️⃣ โอนเงินดาวน์ผ่าน StayVerse',
+    suc_step5:     '5️⃣ รับกุญแจ & เข้าอยู่!'
       },
   zh: {
     nav_rto:       '租购并举',
@@ -2128,11 +2175,11 @@ const T = {
     apply_btn:     '提交申请',
     success_title: '申请已提交！',
     success_sub:   '我们的团队将在24小时内联系您。接下来：',
-    suc_step1:     '文件审核（1-2天）',
-    suc_step2:     '安排看房',
-    suc_step3:     '签署协议',
-    suc_step4:     '交钥匙',
-    suc_step5:     '权益旅程开始'
+    suc_step1:     '1️⃣ 24小时内完成资料审核',
+    suc_step2:     '2️⃣ 预约视频KYC认证',
+    suc_step3:     '3️⃣ 签署租转购协议',
+    suc_step4:     '4️⃣ 通过StayVerse转账首付款',
+    suc_step5:     '5️⃣ 领取钥匙，入住！'
       },
   ru: {
     nav_rto:       'Аренда с выкупом',
@@ -2220,11 +2267,11 @@ const T = {
     apply_btn:     'Отправить заявку',
     success_title: 'Заявка отправлена!',
     success_sub:   'Наша команда свяжется с вами в течение 24 часов. Дальнейшие шаги:',
-    suc_step1:     'Проверка документов (1-2 дня)',
-    suc_step2:     'Организация просмотра',
-    suc_step3:     'Подписание договора',
-    suc_step4:     'Передача ключей',
-    suc_step5:     'Начало накопления доли'
+    suc_step1:     '1️⃣ Проверка заявки в течение 24 часов',
+    suc_step2:     '2️⃣ Видеозвонок для KYC',
+    suc_step3:     '3️⃣ Подписание договора аренды с правом выкупа',
+    suc_step4:     '4️⃣ Перевод первоначального взноса через StayVerse',
+    suc_step5:     '5️⃣ Получение ключей и въезд!'
       }
       };
 
@@ -2293,8 +2340,50 @@ async function submitLead(e) {
 // Init calculator on load
 window.addEventListener('DOMContentLoaded', function() {
   calcRTO();
-  setLang('th');
+  setLang('en');
 });
+
+// ── Mobile menu ─────────────────────────────────────────
+function toggleMobileMenu(){
+  const m = document.getElementById('mobile-menu');
+  const icon = document.getElementById('ham-icon');
+  m.classList.toggle('open');
+  icon.textContent = m.classList.contains('open') ? '✕' : '☰';
+}
+function closeMobileMenu(){
+  const m = document.getElementById('mobile-menu');
+  const icon = document.getElementById('ham-icon');
+  m.classList.remove('open');
+  icon.textContent = '☰';
+}
+// Close on outside click
+document.addEventListener('click', function(e){
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('ham-btn');
+  if(menu && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    closeMobileMenu();
+  }
+});
+// Highlight active mobile nav item matching desktop
+(function syncMobileNavHighlight(){
+  const map = {
+    'pg-home':'mnav-rto','pg-rent':'mnav-rent','pg-investor':'mnav-inv',
+    'pg-myhome':'mnav-my','pg-tenant':'mnav-my','pg-dev':'mnav-my',
+    'pg-listprop':'mnav-list'
+  };
+  const origGoTo = goTo;
+  window.goTo = function(page){
+    origGoTo(page);
+    const pid = pageMap[page];
+    Object.values(map).forEach(id=>{
+      const el = document.getElementById(id);
+      if(el) el.classList.remove('on');
+    });
+    const mid = map[pid];
+    if(mid){ const el = document.getElementById(mid); if(el) el.classList.add('on'); }
+  };
+})();
+
 </script>
 </body>
 </html>
