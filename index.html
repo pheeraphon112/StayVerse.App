@@ -346,6 +346,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
       <button class="lb" onclick="setLang('ru')">RU</button>
       <button class="lb" onclick="setLang('zh')">中文</button>
     </div>
+    <a href="tel:+66923129999" style="display:none;font-size:12px;font-weight:700;color:var(--teal);text-decoration:none;white-space:nowrap;padding:6px 10px;border:1.5px solid var(--teal);border-radius:8px;" class="hide-m" id="nav-phone">📞 092-312-9999</a>
     <!-- Hamburger (mobile only) -->
     <button class="ham-btn" id="ham-btn" onclick="toggleMobileMenu()" aria-label="Menu">
       <span id="ham-icon">☰</span>
@@ -492,27 +493,27 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
         </div>
       </div>
 
-      <!-- Video Banner -->
+      <!-- Video Banner — Official YouTube -->
       <div style="border-radius:var(--r);overflow:hidden;margin-bottom:22px;position:relative;background:#000;">
-        <div style="width:100%;max-height:380px;background:linear-gradient(135deg,#1B3A5C 0%,#006B6B 100%);display:flex;align-items:center;justify-content:center;min-height:240px;position:relative;overflow:hidden;">
-          <div style="text-align:center;color:#fff;z-index:1;">
-            <div style="font-size:56px;margin-bottom:12px;cursor:pointer;opacity:.9;transition:.2s" onclick="this.innerHTML='⏳'">▶</div>
-            <div style="font-size:16px;font-weight:700;margin-bottom:6px;">Grand Florida Beachfront Pattaya</div>
-            <div style="font-size:13px;opacity:.75;">Project Showreel · 2 min · HD</div>
-            <div style="margin-top:14px;background:rgba(255,255,255,.15);padding:8px 20px;border-radius:20px;font-size:12px;display:inline-block;">📹 Video available after launch</div>
-          </div>
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(0,107,107,.4),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(27,58,92,.5),transparent 60%);"></div>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.youtube.com/embed/nG66rfX6NxE?rel=0&modestbranding=1"
+            title="Grand Florida Pattaya — Luxury Beachfront Condo Resort"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+          </iframe>
         </div>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 50%);pointer-events:none;"></div>
-        <div style="position:absolute;bottom:20px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none;">
+        <div style="background:var(--navy-p);padding:10px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
           <div>
-            <div style="font-size:11px;color:rgba(255,255,255,.7);font-weight:700;letter-spacing:1.5px;margin-bottom:4px;">OFFICIAL SHOWREEL</div>
-            <div style="font-size:20px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4);">Grand Florida Beachfront Condo Resort</div>
-            <div style="font-size:13px;color:rgba(255,255,255,.8);margin-top:2px;">Na Jomtien · EEC Zone · Private Beach · 136 Units</div>
+            <div style="font-size:12px;font-weight:700;color:var(--navy)">Grand Florida Beachfront Condo Resort — Official Showreel</div>
+            <div style="font-size:11px;color:var(--muted)">Na Jomtien · EEC Zone · Private Beach · 136 Units · 325K views</div>
           </div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
-            <span style="background:rgba(255,255,255,.18);backdrop-filter:blur(8px);color:#fff;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.3);">🏖️ Beachfront</span>
-            <span style="background:rgba(255,255,255,.18);backdrop-filter:blur(8px);color:#fff;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.3);">🌊 Sea View</span>
+          <div style="display:flex;gap:6px;">
+            <span class="tag tg">🏖️ Beachfront</span>
+            <span class="tag tt">🌊 Sea View</span>
+            <span class="tag">🌏 Foreign Quota</span>
           </div>
         </div>
       </div>
@@ -1098,18 +1099,19 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
           </div>
 
           <!-- Description -->
-          <p style="color:#444;font-size:14px;line-height:1.7;margin:0 0 12px">Grand Florida Beachfront Condo Resort is Pattaya's premier beachfront living destination, developed by Blue Sky Group. Unit B202 is a 1-bedroom Sea View unit on Floor 2, Building B (Belleville) — fully furnished with direct sea views, modern kitchen, and high-quality finishes. 100% Foreign Quota with full Chanote title deed.</p>
-          <p style="color:#444;font-size:14px;line-height:1.7;margin:0">Grand Florida ตั้งอยู่ติดชายหาดนาจอมเทียน พัทยา ห้อง B202 ขนาด 36.44 ตร.ม. วิวทะเลตรง ชั้น 2 อาคาร B พร้อมเฟอร์นิเจอร์ครบ สิทธิต่างชาติ 100% โฉนดชะโลต์</p>
+          <p style="color:#444;font-size:14px;line-height:1.7;margin:0 0 12px">Grand Florida is located on Na Jomtien Soi 14, right on Jomtien Beach — the last true seafront location where a beachfront condominium can be built in Pattaya. Florida-inspired experiences across 21 themed zones, 7 luxury buildings, and 2 grand clubhouses on the shore. Unit B202 (Building B — Belleville) is a 1-bedroom Sea View unit, Floor 2, 36.44 sqm — fully furnished with direct sea views. 100% Foreign Quota · Full Chanote Title Deed.</p>
+          <p style="color:#444;font-size:14px;line-height:1.7;margin:0">Grand Florida ตั้งอยู่บนหาดจอมเทียน นาจอมเทียน ซอย 14 — ที่สุดท้ายที่สามารถสร้างคอนโดติดทะเลได้ในพัทยา มี 21 โซน 7 อาคาร คลับเฮ้าส์ 2 แห่งติดทะเล ห้อง B202 ขนาด 36.44 ตร.ม. วิวทะเลตรง ชั้น 2 อาคาร B (Belle Ville) พร้อมเฟอร์นิเจอร์ครบชุด สิทธิ์ต่างชาติ 100% โฉนดชะโลต์</p>
         </div>
 
         <!-- Amenities -->
         <div style="background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:24px;margin-bottom:20px">
           <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin:0 0 16px">สิ่งอำนวยความสะดวก</h3>
           <div style="display:flex;flex-wrap:wrap;gap:10px">
-            <span class="tag">🌊 Wave Pool</span><span class="tag">🌋 Volcano Slide</span><span class="tag">🏖️ Private Beach</span>
-            <span class="tag">🔒 24hr Security</span><span class="tag">🚗 Parking</span><span class="tag">📶 Fiber Internet</span>
-            <span class="tag">🛋 Fully Furnished</span><span class="tag">❄ A/C</span><span class="tag">🍽 Kitchen Built-in</span>
-            <span class="tag">🏋 Fitness Room</span><span class="tag">♨️ Hydro Pool</span><span class="tag">🍜 Restaurant</span>
+            <span class="tag">🏊 Wave Pool</span><span class="tag">🌋 Volcano Slider</span><span class="tag">🏖️ Florida Beach Club</span>
+            <span class="tag">☁️ Grand Clubhouse x2</span><span class="tag">🏋 Fitness Room</span><span class="tag">♨️ Hydrotherapy Pool</span>
+            <span class="tag">🍽 Restaurant</span><span class="tag">🧖 Sauna Room</span><span class="tag">💻 Co-working Space</span>
+            <span class="tag">🎮 Game Room</span><span class="tag">🌊 King Kong Pool</span><span class="tag">🏃 Jogging Track</span>
+            <span class="tag">🥊 Muay Thai Area</span><span class="tag">🚗 Parking</span><span class="tag">🔒 24hr Security</span>
           </div>
         </div>
 
@@ -1262,22 +1264,42 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
         </div>
       </div>
 
-      <!-- Related by area/type -->
+      <!-- Location / Nearby Landmarks -->
       <div>
-        <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin:0 0 12px">📍 ใกล้เคียง Sathorn</h3>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #eee;border-radius:10px;padding:10px;cursor:pointer">
-            <div style="width:64px;height:48px;border-radius:8px;background:linear-gradient(135deg,#C62828,#ef9a9a);flex-shrink:0"></div>
-            <div><div style="font-size:13px;font-weight:600">The Ritz Sathorn</div><div style="font-size:11px;color:var(--muted)">฿72,000/mo · 1BR · 48 sqm</div></div>
+        <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin:0 0 4px">📍 ทำเลที่ตั้ง — Na Jomtien, Pattaya</h3>
+        <a href="https://goo.gl/maps/dN3XpqXFRcF2" target="_blank" style="display:inline-block;font-size:12px;color:var(--teal);text-decoration:none;margin-bottom:12px">🗺️ Open in Google Maps →</a>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">🎢</span><div style="font-size:13px;font-weight:600">Cartoon Network Amazone</div></div>
+            <div style="font-size:12px;color:var(--muted);font-weight:500">3 km</div>
           </div>
-          <div style="display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #eee;border-radius:10px;padding:10px;cursor:pointer">
-            <div style="width:64px;height:48px;border-radius:8px;background:linear-gradient(135deg,#E65100,#ffcc80);flex-shrink:0"></div>
-            <div><div style="font-size:13px;font-weight:600">Rhythm Sathorn</div><div style="font-size:11px;color:var(--muted)">฿60,000/mo · 1BR · 40 sqm</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">🌺</span><div style="font-size:13px;font-weight:600">Nong Nooch Tropical Garden</div></div>
+            <div style="font-size:12px;color:var(--muted);font-weight:500">5 km</div>
           </div>
-          <div style="display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #eee;border-radius:10px;padding:10px;cursor:pointer">
-            <div style="width:64px;height:48px;border-radius:8px;background:linear-gradient(135deg,#2E7D32,#a5d6a7);flex-shrink:0"></div>
-            <div><div style="font-size:13px;font-weight:600">Lumpini Suite Sathorn</div><div style="font-size:11px;color:var(--muted)">฿42,000/mo · 1BR · 33 sqm</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">🛶</span><div style="font-size:13px;font-weight:600">Pattaya Floating Market</div></div>
+            <div style="font-size:12px;color:var(--muted);font-weight:500">8 km</div>
           </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">✈️</span><div style="font-size:13px;font-weight:600">U-Tapao Int'l Airport</div></div>
+            <div style="font-size:12px;color:var(--muted);font-weight:500">25 km</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">🏙️</span><div style="font-size:13px;font-weight:600">Pattaya City Center</div></div>
+            <div style="font-size:12px;color:var(--muted);font-weight:500">15 km</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">🚗</span><div style="font-size:13px;font-weight:600">Suvarnabhumi Airport</div></div>
+            <div style="font-size:12px;color:var(--muted);font-weight:500">90 km</div>
+          </div>
+        </div>
+        <!-- Contact Developer -->
+        <div style="margin-top:16px;background:linear-gradient(135deg,#0a1628,#1a3a5c);border-radius:12px;padding:16px;color:#fff">
+          <div style="font-size:12px;color:rgba(255,255,255,.6);margin-bottom:6px">📞 Developer Sales Office</div>
+          <div style="font-size:15px;font-weight:700;margin-bottom:4px">Blue Sky Group</div>
+          <a href="tel:+66923129999" style="display:block;font-size:14px;color:#7ec8e3;text-decoration:none;margin-bottom:6px">📱 092-312-9999</a>
+          <a href="https://grandfloridapattaya.com" target="_blank" style="font-size:12px;color:rgba(255,255,255,.6);text-decoration:none">🌐 grandfloridapattaya.com →</a>
         </div>
       </div>
 
@@ -1285,21 +1307,21 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
       <div>
         <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin:0 0 12px">📰 บทความ & VDO เกี่ยวกับโครงการ</h3>
         <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:12px;cursor:pointer">
-            <div style="font-size:12px;color:var(--red);font-weight:600;margin-bottom:4px">▶ VDO Review</div>
-            <div style="font-size:13px;font-weight:600;margin-bottom:2px">รีวิว Grand Florida — ชีวิตติดหาด Na Jomtien</div>
-            <div style="font-size:11px;color:var(--muted)">Propholic.com · 15 min</div>
-          </div>
-          <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:12px;cursor:pointer">
-            <div style="font-size:12px;color:var(--teal);font-weight:600;margin-bottom:4px">📖 Living Guide</div>
-            <div style="font-size:13px;font-weight:600;margin-bottom:2px">ซื้อพร้อมผู้เช่า คุ้มไหม? ต้องรู้อะไรบ้าง</div>
-            <div style="font-size:11px;color:var(--muted)">StayVerse Guide · 8 min read</div>
-          </div>
-          <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:12px;cursor:pointer">
-            <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:4px">★ Sponsored</div>
-            <div style="font-size:13px;font-weight:600;margin-bottom:2px">Sathorn CBD: ทำเลทองของนักลงทุนอสังหาฯ</div>
-            <div style="font-size:11px;color:var(--muted)">Blue Sky Group · 5 min read</div>
-          </div>
+          <a href="https://www.youtube.com/watch?v=nG66rfX6NxE" target="_blank" style="background:#fff;border:1px solid #eee;border-radius:10px;padding:12px;cursor:pointer;text-decoration:none;display:block;">
+            <div style="font-size:12px;color:var(--red);font-weight:600;margin-bottom:4px">▶ Official VDO · 325K views</div>
+            <div style="font-size:13px;font-weight:600;margin-bottom:2px;color:var(--navy)">Grand Florida Pattaya — Luxury Beachfront Condo Resort</div>
+            <div style="font-size:11px;color:var(--muted)">Grand Florida Official · YouTube · 2 min</div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=MUVdXMHFFuc" target="_blank" style="background:#fff;border:1px solid #eee;border-radius:10px;padding:12px;cursor:pointer;text-decoration:none;display:block;">
+            <div style="font-size:12px;color:var(--teal);font-weight:600;margin-bottom:4px">▶ Club House Tour · 238K views</div>
+            <div style="font-size:13px;font-weight:600;margin-bottom:2px;color:var(--navy)">Luxury Beachfront Club House — Grand Florida</div>
+            <div style="font-size:11px;color:var(--muted)">Grand Florida Official · YouTube · 4 min</div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=1F06ChS-q1Y" target="_blank" style="background:#fff;border:1px solid #eee;border-radius:10px;padding:12px;cursor:pointer;text-decoration:none;display:block;">
+            <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:4px">▶ Beachfront Living</div>
+            <div style="font-size:13px;font-weight:600;margin-bottom:2px;color:var(--navy)">Beachfront Living — Grand Florida Pattaya</div>
+            <div style="font-size:11px;color:var(--muted)">Grand Florida Official · YouTube · 3 min</div>
+          </a>
         </div>
       </div>
     </div><!-- /thumb-sections -->
