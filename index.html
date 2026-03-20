@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StayVerse — Rent Today. Own Tomorrow.</title>
 
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BS63SGDWSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BS63SGDWSC');
+</script>
+
 <!-- SEO -->
-<meta name="description" content="Thailand's first Rent-to-Own property platform. Pay monthly, build equity, own your home — no bank loan needed. Browse condos in Bangkok, Pattaya, Hua Hin. 4 languages.">
+<meta name="description" content="Thailand's first Rent-to-Own property platform. Pay monthly, build equity, own your home — no bank loan needed. Browse condos in Bangkok, Pattaya, Hua Hin. 5 languages.">
 <meta name="keywords" content="rent to own thailand, เช่าซื้อ, RTO condo, foreign quota, Pattaya property, Bangkok rent, StayVerse, ผ่อนบ้าน ไม่ต้องกู้">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://stayverse.io">
@@ -19,7 +28,7 @@
 <meta property="og:url" content="https://stayverse.io">
 <meta property="og:site_name" content="StayVerse">
 <meta property="og:title" content="StayVerse — Rent Today. Own Tomorrow.">
-<meta property="og:description" content="Thailand's first Rent-to-Own platform. Every rent payment builds equity. No bank loan. 4 languages. Foreign quota available.">
+<meta property="og:description" content="Thailand's first Rent-to-Own platform. Every rent payment builds equity. No bank loan. 5 languages. Foreign quota available.">
 <meta property="og:image" content="https://stayverse.io/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,6 +36,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +58,7 @@
       "logo": "https://stayverse.io/images/stayverse-logo-lineart.png",
       "description": "Thailand's first Rent-to-Own property marketplace",
       "areaServed": "TH",
-      "knowsLanguage": ["th","en","zh","ru"],
+      "knowsLanguage": ["th","en","zh","ru","ja"],
       "sameAs": ["https://stayverse.app"]
     },
     {
@@ -81,7 +91,7 @@
 <style>
 :root{--navy:#1B3A6B;--navy-l:#2a5298;--navy-p:#edf1f8;--teal:#0E7C7B;--teal-l:#1a9e9d;--teal-p:#e0f5f5;--gold:#C9931A;--gold-p:#fef9e7;--red:#e74c3c;--red-p:#fde8e6;--green:#27ae60;--green-p:#eafaf1;--grey:#f4f6f9;--gm:#dde1e9;--gd:#8492a6;--muted:#8492a6;--w:#fff;--tx:#1e2d3d;--txl:#5a6a7a;--sh:0 2px 16px rgba(27,58,107,.10);--shl:0 8px 32px rgba(27,58,107,.16);--r:12px;--rs:8px;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai','Noto Sans SC','Noto Sans',sans-serif;background:var(--grey);color:var(--tx);font-size:15px;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai','Noto Sans JP','Noto Sans SC','Noto Sans',sans-serif;background:var(--grey);color:var(--tx);font-size:15px;}
 .page{display:none;min-height:100vh;}.page.active{display:block;animation:fi .2s ease;}
 @keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 /* NAV */
@@ -343,6 +353,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
     <div class="lb-bar">
       <button class="lb on" onclick="setLang('en')">EN</button>
       <button class="lb" onclick="setLang('th')">TH</button>
+      <button class="lb" onclick="setLang('ja')">JP</button>
       <button class="lb" onclick="setLang('ru')">RU</button>
       <button class="lb" onclick="setLang('zh')">中文</button>
     </div>
@@ -362,6 +373,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
     <div class="lang-row">
       <button class="lb on" onclick="setLang('en');closeMobileMenu()">EN</button>
       <button class="lb" onclick="setLang('th');closeMobileMenu()">TH</button>
+      <button class="lb" onclick="setLang('ja');closeMobileMenu()">JP</button>
       <button class="lb" onclick="setLang('ru');closeMobileMenu()">RU</button>
       <button class="lb" onclick="setLang('zh');closeMobileMenu()">中文</button>
     </div>
@@ -683,7 +695,7 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
         </div>
         <div style="background:var(--grey);border-radius:var(--r);padding:24px;text-align:center;">
           <div style="font-size:40px;margin-bottom:12px;">🌏</div>
-          <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;" data-i18n="why5_title">4 ภาษา · ชาวต่างชาติเช่าได้</h3>
+          <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;" data-i18n="why5_title">5 ภาษา · ชาวต่างชาติเช่าได้</h3>
           <p style="font-size:13px;color:var(--txl);line-height:1.7;" data-i18n="why5_body">รองรับ Foreign Quota โดยเฉพาะ ให้บริการเป็นภาษาอังกฤษ ไทย จีน รัสเซีย ตลอด process</p>
         </div>
         <div style="background:var(--grey);border-radius:var(--r);padding:24px;text-align:center;">
@@ -726,6 +738,132 @@ footer{background:var(--navy);color:#fff;padding:48px 0 24px;}
     </div>
   </div>
 
+  <!-- ── THE PROBLEM STATS ── -->
+  <div style="background:linear-gradient(160deg,#0d2444 0%,#1B3A6B 55%,#0d5e5d 100%);padding:52px 0;">
+    <div class="wrap">
+      <div class="st" style="text-align:center;margin-bottom:36px;">
+        <div class="tag" style="background:rgba(255,255,255,.15);color:#fff;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:600;display:inline-block;margin-bottom:10px;">THE HOUSING OWNERSHIP PROBLEM IN THAILAND</div>
+        <h2 style="color:#fff;font-size:26px;font-weight:800;">ปัญหาที่ StayVerse เกิดมาเพื่อแก้ไข</h2>
+        <p style="color:rgba(255,255,255,.7);">Rising prices, strict lending, and zero equity — millions are locked out of homeownership</p>
+      </div>
+      <div class="g3">
+        <div style="background:rgba(255,255,255,.08);border-radius:var(--r);padding:32px 24px;text-align:center;border:1px solid rgba(255,255,255,.12);">
+          <div style="font-size:54px;font-weight:900;color:#C9931A;line-height:1;">70%<sup style="font-size:28px;">+</sup></div>
+          <div style="font-size:11px;font-weight:800;color:rgba(255,255,255,.9);letter-spacing:1.5px;margin:10px 0;text-transform:uppercase;">Mortgage Rejection Rate</div>
+          <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.7;">Most applicants rejected by Thai banks due to insufficient income documents, informal employment, or weak credit history.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border-radius:var(--r);padding:32px 24px;text-align:center;border:1px solid rgba(255,255,255,.12);">
+          <div style="font-size:54px;font-weight:900;color:#C9931A;line-height:1;">฿560K<sup style="font-size:28px;">+</sup></div>
+          <div style="font-size:11px;font-weight:800;color:rgba(255,255,255,.9);letter-spacing:1.5px;margin:10px 0;text-transform:uppercase;">Average Down Payment Required</div>
+          <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.7;">Equivalent to 3+ years of household savings for most Thai families — an insurmountable upfront barrier.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border-radius:var(--r);padding:32px 24px;text-align:center;border:1px solid rgba(255,255,255,.12);">
+          <div style="font-size:54px;font-weight:900;color:#C9931A;line-height:1;">฿2.16M</div>
+          <div style="font-size:11px;font-weight:800;color:rgba(255,255,255,.9);letter-spacing:1.5px;margin:10px 0;text-transform:uppercase;">Lifetime Rent · Zero Equity</div>
+          <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.7;">The average Thai renter pays ฿2.16M over a lifetime with no asset accumulation. Every payment disappears.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <p style="color:rgba(255,255,255,.6);font-size:13px;font-style:italic;">StayVerse transforms every monthly payment into real property equity — automatically, transparently, digitally.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PLATFORM MODULES ── -->
+  <div class="sec sec-w">
+    <div class="wrap">
+      <div class="st" style="text-align:center;">
+        <div class="tag tt" style="margin-bottom:10px;">PLATFORM MODULES</div>
+        <h2>ครบทุก Module ในที่เดียว</h2>
+        <p>StayVerse digital platform ที่ developer, investor, และ tenant ใช้งานได้พร้อมกัน</p>
+      </div>
+      <div class="g3">
+        <div style="background:var(--grey);border-radius:var(--r);padding:24px;">
+          <div style="font-size:28px;margin-bottom:10px;">🔍</div>
+          <h3 style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;">Front-End Listing</h3>
+          <p style="font-size:13px;color:var(--txl);line-height:1.6;">Dynamic listing พร้อม search engine กรองตามทำเล ราคา และ equity rate</p>
+        </div>
+        <div style="background:var(--grey);border-radius:var(--r);padding:24px;">
+          <div style="font-size:28px;margin-bottom:10px;">📄</div>
+          <h3 style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;">Back-End Reports & Docs</h3>
+          <p style="font-size:13px;color:var(--txl);line-height:1.6;">Hire Purchase Contract, Invoice & Receipt, Payment Calculator, Statement — Document Exchange Hub for Banking</p>
+        </div>
+        <div style="background:var(--grey);border-radius:var(--r);padding:24px;">
+          <div style="font-size:28px;margin-bottom:10px;">🔥</div>
+          <h3 style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;">Fire Sale Price Listing</h3>
+          <p style="font-size:13px;color:var(--txl);line-height:1.6;">End-of-contract unit listing with fire sale price — gives developers a guaranteed exit strategy</p>
+        </div>
+        <div style="background:var(--grey);border-radius:var(--r);padding:24px;">
+          <div style="font-size:28px;margin-bottom:10px;">📈</div>
+          <h3 style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;">Investor Hub</h3>
+          <p style="font-size:13px;color:var(--txl);line-height:1.6;">Portal สำหรับนักลงทุนที่ต้องการซื้อ unit เพื่อลงทุน พร้อม real-time equity tracking dashboard</p>
+        </div>
+        <div style="background:var(--grey);border-radius:var(--r);padding:24px;">
+          <div style="font-size:28px;margin-bottom:10px;">💳</div>
+          <h3 style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;">Payment Gateway & Wallet</h3>
+          <p style="font-size:13px;color:var(--txl);line-height:1.6;">Integrated กับ One Wallet — ตัดอัตโนมัติทุกเดือน ไม่ต้องมีบัญชีธนาคารไทย รองรับ cross-border</p>
+        </div>
+        <div style="background:var(--grey);border-radius:var(--r);padding:24px;">
+          <div style="font-size:28px;margin-bottom:10px;">🏠</div>
+          <h3 style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;">Value Added Services</h3>
+          <p style="font-size:13px;color:var(--txl);line-height:1.6;">Housekeeping, Laundry, Relocation service — ทำให้ห้องพร้อม move-in และเพิ่มมูลค่าให้ผู้เช่า</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DEVELOPER SAAS PRICING ── -->
+  <div class="sec" style="background:linear-gradient(180deg,#edf1f8,#fff);">
+    <div class="wrap">
+      <div class="st" style="text-align:center;">
+        <div class="tag tn" style="margin-bottom:10px;">FOR DEVELOPERS & LANDLORDS</div>
+        <h2>List Your Properties. Close More Deals.</h2>
+        <p>SaaS + Transaction Commission — sustainable, scalable, not cash-burning</p>
+      </div>
+      <div class="g3">
+        <!-- Starter -->
+        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;border:2px solid var(--gm);">
+          <div style="background:var(--navy-p);padding:24px;text-align:center;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--txl);margin-bottom:8px;">STARTER</div>
+            <div style="font-size:44px;font-weight:900;color:var(--navy);line-height:1;">฿2,900</div>
+            <div style="font-size:13px;color:var(--txl);margin-top:6px;">/month · Up to 10 active listings</div>
+          </div>
+          <div style="padding:20px 24px;">
+            <div style="font-size:13px;color:var(--tx);line-height:2.1;">✓ Basic listing & contract tools<br>✓ Email support (48h response)<br>✓ Monthly performance report<br>✓ Standard contract templates</div>
+            <button class="btn bo" style="width:100%;margin-top:16px;justify-content:center;" onclick="goTo('listprop')">Get Started →</button>
+          </div>
+        </div>
+        <!-- Professional (Featured) -->
+        <div style="background:var(--teal);border-radius:var(--r);box-shadow:var(--shl);overflow:hidden;position:relative;">
+          <div style="position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;">POPULAR</div>
+          <div style="padding:24px;text-align:center;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,.7);margin-bottom:8px;">PROFESSIONAL</div>
+            <div style="font-size:44px;font-weight:900;color:#fff;line-height:1;">฿7,900</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:6px;">/month · Up to 50 active listings</div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <div style="font-size:13px;color:rgba(255,255,255,.9);line-height:2.1;">✓ Priority listing placement<br>✓ API & system integration<br>✓ Dedicated account manager<br>✓ Real-time analytics dashboard</div>
+            <button class="btn" style="width:100%;margin-top:16px;justify-content:center;background:#fff;color:var(--teal);font-weight:700;" onclick="goTo('listprop')">List Your Units →</button>
+          </div>
+        </div>
+        <!-- Enterprise -->
+        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;border:2px solid var(--gm);">
+          <div style="background:var(--navy-p);padding:24px;text-align:center;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--txl);margin-bottom:8px;">ENTERPRISE</div>
+            <div style="font-size:44px;font-weight:900;color:var(--navy);line-height:1;">฿19,900</div>
+            <div style="font-size:13px;color:var(--txl);margin-top:6px;">/month · Unlimited listings</div>
+          </div>
+          <div style="padding:20px 24px;">
+            <div style="font-size:13px;color:var(--tx);line-height:2.1;">✓ White-label branding option<br>✓ Custom contract structures<br>✓ 24/7 priority support hotline<br>✓ Bulk management & API access</div>
+            <button class="btn bo" style="width:100%;margin-top:16px;justify-content:center;" onclick="goTo('listprop')">Contact Us →</button>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;background:var(--teal-p);border-radius:var(--rs);padding:14px 20px;">
+        <span style="font-size:14px;color:var(--teal);"><strong>+ 3% commission per signed contract</strong> — earn from every successful transaction. No subscription lock-in.</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ── ARTICLES ── -->
   <div class="sec sec-w">
@@ -1971,8 +2109,8 @@ const T = {
     why3_body:     'Automatic monthly deductions — no chasing payments, no manual transfers. Completely seamless.',
     why4_title:    'Verified Properties',
     why4_body:     'Every listing is title-deed verified with fair market pricing. Fully transparent, no hidden costs.',
-    why5_title:    'Foreign-Friendly · 4 Languages',
-    why5_body:     'Foreign Quota available. Full service in English, Thai, Chinese, and Russian throughout the process.',
+    why5_title:    'Foreign-Friendly · 5 Languages',
+    why5_body:     'Foreign Quota available. Full service in English, Thai, Chinese, Russian, and Japanese throughout the process.',
     why6_title:    'Living+ Services',
     why6_body:     'Optional service packages — housekeeping, laundry, concierge. Your unit ready-to-rent at a better price.',
     // how steps
@@ -2068,8 +2206,8 @@ const T = {
     why3_body:     'ตัดเงินอัตโนมัติทุกเดือน ไม่ต้องตามจ่าย ไม่ต้องโอนเอง ชำระอัตโนมัติ ไม่มีสะดุด',
     why4_title:    'ทรัพย์สินผ่านการยืนยันแล้ว',
     why4_body:     'ทุก listing ผ่านการตรวจสอบสิทธิ์กรรมสิทธิ์ ราคาตลาดยุติธรรม โปร่งใส ไม่มีต้นทุนซ่อน',
-    why5_title:    '4 ภาษา · ชาวต่างชาติเช่าได้',
-    why5_body:     'รองรับ Foreign Quota โดยเฉพาะ ให้บริการเป็นภาษาอังกฤษ ไทย จีน รัสเซีย ตลอด process',
+    why5_title:    '5 ภาษา · ชาวต่างชาติเช่าได้',
+    why5_body:     'รองรับ Foreign Quota โดยเฉพาะ ให้บริการเป็นภาษาอังกฤษ ไทย จีน รัสเซีย ญี่ปุ่น ตลอด process',
     why6_title:    'Living+ Service ครบครัน',
     why6_body:     'ตัวเลือก Service Apartment Package — Housekeeping, Laundry, Concierge ทำให้ห้องของคุณพร้อมเช่าในราคาที่ดีขึ้น',
     how1_title:    'เลือกห้องที่ใช่',
@@ -2160,8 +2298,8 @@ const T = {
     why3_body:     '每月自动扣款，无需追缴，无需手动转账，全程无忧。',
     why4_title:    '经认证的房产',
     why4_body:     '每套房源均已核实产权，价格公正透明，无隐性费用。',
-    why5_title:    '外籍友好 · 支持4种语言',
-    why5_body:     '专为外籍配额设计，提供英语、泰语、中文、俄语全程服务。',
+    why5_title:    '外籍友好 · 支持5种语言',
+    why5_body:     '专为外籍配额设计，提供英语、泰语、中文、俄语、日语全程服务。',
     why6_title:    'Living+ 配套服务',
     why6_body:     '可选服务套餐——家政、洗衣、礼宾服务，让您的房间更易出租，价格更优。',
     how1_title:    '选择房产',
@@ -2252,8 +2390,8 @@ const T = {
     why3_body:     'Автоматическое ежемесячное списание — без напоминаний и ручных переводов. Полностью без стресса.',
     why4_title:    'Проверенные объекты',
     why4_body:     'Каждый объект проверен по документам на право собственности. Прозрачные цены, никаких скрытых расходов.',
-    why5_title:    'Для иностранцев · 4 языка',
-    why5_body:     'Доступна иностранная квота. Полный сервис на английском, тайском, китайском и русском языках.',
+    why5_title:    'Для иностранцев · 5 языков',
+    why5_body:     'Доступна иностранная квота. Полный сервис на английском, тайском, китайском, русском и японском языках.',
     why6_title:    'Living+ Сервис',
     why6_body:     'Опциональные пакеты — уборка, прачечная, консьерж. Квартира готова к аренде по лучшей цене.',
     how1_title:    'Выберите объект',
@@ -2314,6 +2452,98 @@ const T = {
     suc_step3:     '3️⃣ Подписание договора аренды с правом выкупа',
     suc_step4:     '4️⃣ Перевод первоначального взноса через StayVerse',
     suc_step5:     '5️⃣ Получение ключей и въезд!'
+      },
+  ja: {
+    nav_rto:       '賃貸購入',
+    nav_rent:      '賃貸物件',
+    nav_inv:       '投資家向け',
+    nav_my:        'マイホーム',
+    nav_list:      '物件掲載',
+    tab_rto:       '賃貸購入',
+    tab_rent:      '賃貸',
+    tab_map:       '地図',
+    tab_dev:       'デベロッパー',
+    tab_near:      '近くの物件',
+    tab_lf:        'ライフスタイル',
+    hero_title:    'マイホームへの新しい道',
+    hero_sub:      'スマートに借りて、エクイティを蓄積、本当のオーナーに。',
+    search_ph:     'プロジェクト、エリア、BTS駅で検索…',
+    feat_title:    'おすすめ物件',
+    why_title:     'なぜStayVerse？',
+    how_title:     '仕組み',
+    art_title:     'リビングガイド＆ストーリー',
+    testi_title:   '会員の声',
+    footer_about:  'StayVerse — タイ初のレント・トゥ・オウン・プラットフォーム。賃貸と持ち家の新しいカタチ。',
+    why1_title:    '本物のエクイティを蓄積',
+    why1_body:     '毎月の家賃が無駄にならず、あなたの所有権に変わります。',
+    why2_title:    '高額な頭金は不要',
+    why2_body:     'わずか5%から開始。銀行ローン不要、クレジットスコア不要。5分の本人確認で申込み可能。',
+    why3_title:    '自動引落し、手間ゼロ',
+    why3_body:     '毎月自動引落し。支払い忘れなし、手動送金なし。完全シームレス。',
+    why4_title:    '認証済み物件',
+    why4_body:     '全物件が所有権確認済み。公正な市場価格、完全透明、隠れたコストなし。',
+    why5_title:    '外国人対応 · 5言語サポート',
+    why5_body:     '外国人枠あり。英語・タイ語・中国語・ロシア語・日本語で全プロセス対応。',
+    why6_title:    'Living+ サービス',
+    why6_body:     'オプションのサービスパッケージ — ハウスキーピング、ランドリー、コンシェルジュ。より良い価格で賃貸可能に。',
+    how1_title:    '物件を選ぶ',
+    how1_body:     '価格と条件が完全透明な厳選レント・トゥ・オウン物件を閲覧。',
+    how2_title:    '5分で申込み',
+    how2_body:     'All ID Global（デジタルKYC）で本人確認。収入証明不要。銀行不要。24時間以内に承認。',
+    how3_title:    'オーナーシップを蓄積',
+    how3_body:     '毎月の家賃の一部がエクイティに変換。準備ができたら購入。',
+    btn_detail:    '詳細を見る',
+    btn_buytenant: 'テナント付き購入',
+    btn_rent_cta:  '賃貸物件を探す',
+    btn_invest_cta:'投資物件を見る',
+    btn_view_all:  'すべて見る',
+    btn_affiliate: 'エージェントになる',
+    btn_search:    '検索',
+    btn_list:      '物件を掲載',
+    btn_apply:     '今すぐ申込み',
+    btn_login:     'ログイン',
+    rent_title:    '賃貸物件一覧',
+    rent_sub:      'バンコク・パタヤのBTS・MRT沿線、ライフスタイルエリアの厳選賃貸。',
+    investor_title:'投資向け物件',
+    investor_sub:  'テナント付き購入。初日から収益を生み出します。',
+    myhome_title:  'マイホーム・ダッシュボード',
+    myhome_sub:    'エクイティの蓄積を追跡し、StayVerseのマイホームを管理。',
+    myhome_feat1:  'エクイティトラッカー',
+    myhome_feat1b: '毎月増える所有割合を確認。',
+    myhome_feat2:  '支払い履歴',
+    myhome_feat2b: 'レント・トゥ・エクイティの全支払い記録。',
+    myhome_feat3:  '買取計算機',
+    myhome_feat3b: 'リアルタイムで買取価格を確認。',
+    myhome_login:  'ログインしてダッシュボードを表示',
+    listprop_title:'物件を掲載する',
+    listprop_sub:  '今日は賃貸収入を得て、明日はフルプライスで売却。',
+    aff_title:     'StayVerseエージェントになる',
+    aff_sub:       '成約ごとにコミッション獲得。収入の上限なし。',
+    tenant_title:  'ようこそ、テナント様',
+    tenant_sub:    '支払い、エクイティ、買取スケジュールをこちらで確認。',
+    dev_title:     'デベロッパーポータル',
+    dev_sub:       'プロジェクト掲載、問い合わせ追跡、販売データへのアクセス。',
+    calc_title:    'レント・トゥ・オウン計算機',
+    calc_sub:      '期間中にどれだけのエクイティが蓄積されるか確認。',
+    calc_down:     '頭金 (฿)',
+    calc_rent_lbl: '月額家賃 (฿)',
+    calc_dur:      '期間（月）',
+    calc_totalrent:'家賃支払い総額',
+    calc_down_lbl: '頭金',
+    calc_equity:   '蓄積エクイティ',
+    calc_buynow:   '買取価格',
+    calc_market:   '推定市場価値',
+    calc_savings:  '市場比での節約額',
+    calc_note:     '* 期間中の市場成長15%を想定。ファイナンシャルアドバイザーにご相談ください。',
+    apply_title:   'レント・トゥ・オウンに申込む',
+    apply_btn:     '申込みを送信',
+    success_title: '申込み完了！',
+    success_sub:   '24時間以内にチームからご連絡いたします。次のステップ：',
+    suc_step1:     '1️⃣ 24時間以内に書類確認',
+    suc_step2:     '2️⃣ ビデオ通話KYCの予約',
+    suc_step3:     '3️⃣ レント・トゥ・オウン契約に署名',
+    suc_step4:     '4️⃣ StayVerseを通じて頭金を送金',
+    suc_step5:     '5️⃣ 鍵を受け取り、入居！'
       }
       };
 
